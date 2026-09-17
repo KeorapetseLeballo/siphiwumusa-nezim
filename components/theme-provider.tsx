@@ -21,19 +21,19 @@ export const ThemeContext = createContext<ThemeContextValue>({
 })
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
-  const [theme, setTheme] = useState<CarbonTheme>('white')
+  const theme: CarbonTheme = 'g100' // Dark mode only
 
   useEffect(() => {
     const root = document.documentElement
     root.classList.remove('cds--white', 'cds--g100')
-    root.classList.add(`cds--${theme}`)
-  }, [theme])
+    root.classList.add('cds--g100')
+  }, [])
 
-  const toggleTheme = () => setTheme((t) => (t === 'white' ? 'g100' : 'white'))
+  const toggleTheme = () => {} // No-op since theme is locked
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
-      <GlobalTheme theme={theme}>{children}</GlobalTheme>
+      <GlobalTheme theme="g100">{children}</GlobalTheme>
     </ThemeContext.Provider>
   )
 }
