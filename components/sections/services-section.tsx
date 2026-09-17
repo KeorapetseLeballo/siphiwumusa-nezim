@@ -1,7 +1,7 @@
 'use client'
 
 import { Column, Grid } from '@carbon/react'
-import { ServiceCard } from '@/components/service-card'
+import { ServiceCard } from '@/components/ui/service-card'
 import { ServiceCarousel } from '@/components/service-carousel'
 import { useIsMobile } from '@/hooks/useMediaQuery'
 import { SERVICES } from '@/constants'
@@ -24,10 +24,7 @@ export function ServicesSection() {
               {SERVICES.map((service) => (
                 <ServiceCard
                   key={service.id}
-                  number={service.id}
-                  title={service.title}
-                  description={service.description}
-                  iconName={service.icon}
+                  service={service}
                 />
               ))}
             </div>

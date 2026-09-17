@@ -1,3 +1,9 @@
+import type { ComponentType } from 'react'
+
+// Re-export types and constants from services.ts
+export type { ServiceItem } from './services'
+export { SERVICES } from './services'
+
 export const COMPANY_INFO = {
   name: 'Siphiwumusa Nezimangaliso',
   shortName: 'SN',
@@ -6,6 +12,7 @@ export const COMPANY_INFO = {
   established: 2024,
   founder: 'Nomusa Khumalo',
   experience: '5+ years',
+  legalEntity: 'PTY LTD · South Africa',
 } as const
 
 export const CONTACT_INFO = {
@@ -18,45 +25,6 @@ export const CONTACT_INFO = {
     country: 'South Africa',
   },
 } as const
-
-export const SERVICES = [
-  {
-    id: '01',
-    title: 'Road construction & asphalt',
-    description: 'Construction, resurfacing, rehabilitation and maintenance of municipal, provincial and access roads.',
-    icon: 'Roadmap',
-  },
-  {
-    id: '02',
-    title: 'Water & sewer reticulation',
-    description: 'Installation, upgrading and maintenance of water-distribution pipelines, sewer networks and associated infrastructure.',
-    icon: 'Security',
-  },
-  {
-    id: '03',
-    title: 'Stormwater & drainage',
-    description: 'Stormwater channels, culverts, drainage pipelines and erosion-control systems built for dependable performance.',
-    icon: 'Security',
-  },
-  {
-    id: '04',
-    title: 'Bulk earthworks',
-    description: 'Site clearing, excavation, filling, compaction, trenching and ground preparation for infrastructure projects.',
-    icon: 'Roadmap',
-  },
-  {
-    id: '05',
-    title: 'Concrete & civil structures',
-    description: 'Culverts, retaining walls, reservoirs, foundations and small bridges constructed with care and precision.',
-    icon: 'Security',
-  },
-  {
-    id: '06',
-    title: 'Building & renovations',
-    description: 'Construction, alteration, renovation and maintenance of residential, commercial, industrial and institutional buildings.',
-    icon: 'Security',
-  },
-] as const
 
 export const OBJECTIVES = [
   'Deliver projects safely, on time, within budget and to specification.',

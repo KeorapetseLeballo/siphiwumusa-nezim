@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { Button } from '@carbon/react'
 import { ChevronLeft, ChevronRight } from '@carbon/icons-react'
-import { ServiceCard } from './service-card'
+import { ServiceCard } from './ui/service-card'
 import { SERVICES } from '@/constants'
 
 export function ServiceCarousel() {
@@ -25,12 +25,7 @@ export function ServiceCarousel() {
 
   return (
     <div className="service-carousel">
-      <ServiceCard
-        number={currentService.id}
-        title={currentService.title}
-        description={currentService.description}
-        iconName={currentService.icon}
-      />
+      <ServiceCard service={currentService} />
       <div className="service-carousel__controls">
         <Button
           kind="ghost"
