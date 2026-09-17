@@ -36,11 +36,7 @@ export function HeroSection() {
               Infrastructure<br />
               Built to last
             </span>
-          </div>
-          <div className="hero-stamp">
-            <span>{COMPANY_INFO.shortName}</span>
-            <span>Reliable by design</span>
-          </div>
+          </div> 
         </Column>
       </Grid>
     </section>
