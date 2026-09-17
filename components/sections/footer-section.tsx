@@ -9,7 +9,7 @@ export function FooterSection() {
       <Grid className="portfolio-grid">
         <Column sm={4} md={8} lg={8} xlg={8} max={8}>
           <strong>{COMPANY_INFO.name.toUpperCase()}</strong>
-          <span>PTY LTD · {COMPANY_INFO.address?.country || 'South Africa'}</span>
+          <span>{COMPANY_INFO.legalEntity}</span>
         </Column>
         <Column sm={4} md={8} lg={4} xlg={4} max={4}>
           <a href="#top">Back to top ↑</a>
